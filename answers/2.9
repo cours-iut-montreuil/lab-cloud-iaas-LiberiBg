@@ -1,8 +1,5 @@
-cd spring-petclinic/src/main/resources/db/mysql/
-mariadb <
-source user.sql
-use petclinic
-source schema.sql
-source data.sql
-cd
-java -Dspring.profiles.active=mysql -jar target/*.jar
+cd src/main/resources/db/mysql/
+cat petclinic_db_setup_mysql.txt
+mysql -u root -p petclinic < user.sql
+mysql -u root -p petclinic < schema.sql
+mysql -u root -p petclinic < data.sql
