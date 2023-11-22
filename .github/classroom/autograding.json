@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "name": "1.2",
+      "setup": "",
+      "run": "grep -q -E 'git.*clone' answers/1.2",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "2.2",
+      "setup": "",
+      "run": "grep -q -E 'install.*git' answers/2.2 && grep -q -E 'install.*maven' answers/2.2 && grep -q -E 'install.*openjdk-17-jdk' answers/2.2",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "2.3",
+      "setup": "",
+      "run": "grep -q -E 'git.*clone' answers/2.3",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "2.5",
+      "setup": "",
+      "run": "grep -q -E 'firewall' answers/2.5 || grep -q -E 'security group' answers/2.5",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "2.6",
+      "setup": "",
+      "run": "grep -q -E '8080' answers/2.6",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "2.8",
+      "setup": "",
+      "run": "grep -q -E 'install.*mariadb-server' answers/2.8 && grep -q -E 'mysql_secure_installation' answers/2.8",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "2.9",
+      "setup": "",
+      "run": "grep -q -E '< user.sql' answers/2.9 && grep -q -E '< schema.sql' answers/2.9 && grep -q -E '< data.sql' answers/2.9",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Owner created",
+      "setup": "",
+      "run": "curl \"$(cat iaas-url)/owners?lastName=$(cat iaas-owner-name)\" -Ls -o /dev/null -w %{url_effective}",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "App running",
+      "setup": "",
+      "run": "curl -f -LI \"$(cat iaas-url)\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
