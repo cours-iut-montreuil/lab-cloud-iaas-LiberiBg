@@ -1,8 +1,1 @@
-cd spring-petclinic/src/main/resources/db/mysql/
-mariadb <<
-source user.sql
-use petclinic
-source schema.sql
-source data.sql
-cd
-java -Dspring.profiles.active=mysql -jar target/*.jar
+http://52.17.44.241:8080/oups
